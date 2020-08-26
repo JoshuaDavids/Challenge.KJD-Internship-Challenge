@@ -7,6 +7,23 @@
 body {
   background: #201728;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.btn {
+  border: 2px solid #e01c5a;
+}
 
 .preloader {
   background-color: #201728;
@@ -57,10 +74,6 @@ body {
       transform: rotate(360deg);
     }
   }
-}
-
-::-webkit-scrollbar {
-  width: 0;
 }
 
 // home start
@@ -263,8 +276,6 @@ header {
       a {
         font-size: 16px;
         display: flex;
-        color: #fff;
-        text-decoration: none;
         align-items: center;
         justify-content: center;
         margin: auto;
@@ -305,18 +316,88 @@ header {
 }
 // about end
 
-/* Responsiveness */
-@media (max-width: 1199px) {
-  .about {
-    .card {
-      .arrow-glyph {
-        display: none;
+// advert start
+.advert {
+  position: relative;
+  height: 100vh;
+  .hex-gradient {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    left: 25%;
+  }
+  .image {
+    position: absolute;
+    display: inline-block;
+    right: 20%;
+    bottom: 20%;
+    z-index: 2;
+  }
+  .glyph {
+    position: absolute;
+    display: inline-block;
+    right: 24%;
+    bottom: 67%;
+    z-index: 3;
+  }
+  .arrow-glyph {
+    position: absolute;
+    display: inline-block;
+    top: 78%;
+    left: 32%;
+  }
+  .title {
+    position: absolute;
+    display: inline-block;
+    left: 18%;
+    top: 12%;
+    width: 250px;
+    z-index: 100;
+    font-size: 50px;
+  }
+  .text {
+    position: absolute;
+    display: inline-block;
+    width: 22%;
+    top: 37%;
+    left: 17%;
+    z-index: 100;
+    line-height: 20px;
+    .btn {
+      position: absolute;
+      display: flex;
+      height: 38px;
+      width: 145px;
+      top: 120%;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-family: sans-serif;
+      &:hover {
+        transition: 0.5s ease;
+        background: #e01c5a;
       }
+    }
+    .arrow {
+      position: absolute;
+      display: inline-block;
+      top: 128%;
+      left: 45%;
     }
   }
 }
+// advert end
+
+// data start
+.data {
+  display: none;
+}
+// data end
+
+/* Responsiveness */
 @media (max-width: 991px) {
   .about {
+    height: 60vh;
     .card {
       height: 55vh;
       p {
@@ -329,6 +410,45 @@ header {
     }
     .arrow-glyph {
       display: none;
+    }
+  }
+  .advert {
+    .hex-gradient {
+      display: none;
+    }
+    .image {
+      top: 13%;
+      right: 31%;
+      margin: auto;
+    }
+    .glyph {
+      display: none;
+    }
+    .arrow-glyph {
+      display: none;
+    }
+    .title {
+      position: absolute;
+      top: 0;
+      text-align: center;
+      font-size: 40px;
+      width: 625px;
+    }
+    .text {
+      position: absolute;
+      text-align: center;
+      top: 60%;
+      font-size: 20px;
+      width: 625px;
+      letter-spacing: 1px;
+      line-height: 25px;
+      .btn {
+        position: relative;
+        margin: 20px auto;
+      }
+      .arrow {
+        display: none;
+      }
     }
   }
 }
@@ -344,6 +464,7 @@ header {
     }
   }
   .about {
+    height: 40vh;
     .card {
       height: 40vh;
       p {
@@ -361,6 +482,43 @@ header {
     }
     .arrow-glyph {
       display: none;
+    }
+  }
+  .advert {
+    .hex-gradient {
+      display: none;
+    }
+    .image {
+      top: 13%;
+      right: 25%;
+      margin: auto;
+    }
+    .glyph {
+      display: none;
+    }
+    .arrow-glyph {
+      display: none;
+    }
+    .title {
+      position: absolute;
+      top: 0;
+      text-align: center;
+      font-size: 35px;
+      width: 505px;
+    }
+    .text {
+      position: absolute;
+      text-align: center;
+      top: 60%;
+      font-size: 18px;
+      width: 505px;
+      .btn {
+        position: relative;
+        margin: 20px auto;
+      }
+      .arrow {
+        display: none;
+      }
     }
   }
 }
@@ -391,6 +549,42 @@ header {
       display: none;
     }
   }
+  .advert {
+    .hex-gradient {
+      display: none;
+    }
+    .image {
+      top: 18%;
+      margin: auto;
+    }
+    .glyph {
+      display: none;
+    }
+    .arrow-glyph {
+      display: none;
+    }
+    .title {
+      position: absolute;
+      top: 0;
+      text-align: center;
+      font-size: 35px;
+      width: 375px;
+    }
+    .text {
+      position: absolute;
+      text-align: center;
+      top: 60%;
+      font-size: 18px;
+      width: 375px;
+      .btn {
+        position: relative;
+        margin: 20px auto;
+      }
+      .arrow {
+        display: none;
+      }
+    }
+  }
 }
 @media (max-width: 360px) {
   .container {
@@ -399,7 +593,7 @@ header {
     }
   }
   .about {
-    height: 50vh;
+    height: 40vh;
     .card {
       height: 45vh;
       p {
@@ -418,6 +612,42 @@ header {
     }
     .arrow-glyph {
       display: none;
+    }
+  }
+  .advert {
+    .hex-gradient {
+      display: none;
+    }
+    .image {
+      top: 18%;
+      margin: auto;
+    }
+    .glyph {
+      display: none;
+    }
+    .arrow-glyph {
+      display: none;
+    }
+    .title {
+      position: absolute;
+      top: 0;
+      text-align: center;
+      font-size: 35px;
+      width: 250px;
+    }
+    .text {
+      position: absolute;
+      text-align: center;
+      top: 45%;
+      font-size: 18px;
+      width: 250px;
+      .btn {
+        position: relative;
+        margin: 20px auto;
+      }
+      .arrow {
+        display: none;
+      }
     }
   }
 }

@@ -9,6 +9,26 @@ body {
   background: #201728;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  border: 2px solid #e01c5a;
+}
+
 .preloader {
   background-color: #201728;
   position: fixed;
@@ -58,10 +78,6 @@ body {
     -webkit-transform: rotate(3600deg);
     transform: rotate(360deg);
   }
-}
-
-::-webkit-scrollbar {
-  width: 0;
 }
 
 header {
@@ -262,8 +278,6 @@ header .ham-burger.active span:nth-child(3) {
 .about .card p a {
   font-size: 16px;
   display: flex;
-  color: #fff;
-  text-decoration: none;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -300,13 +314,85 @@ header .ham-burger.active span:nth-child(3) {
   height: 60px;
 }
 
-/* Responsiveness */
-@media (max-width: 1199px) {
-  .about .card .arrow-glyph {
-    display: none;
-  }
+.advert {
+  position: relative;
+  height: 100vh;
 }
+.advert .hex-gradient {
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  left: 25%;
+}
+.advert .image {
+  position: absolute;
+  display: inline-block;
+  right: 20%;
+  bottom: 20%;
+  z-index: 2;
+}
+.advert .glyph {
+  position: absolute;
+  display: inline-block;
+  right: 24%;
+  bottom: 67%;
+  z-index: 3;
+}
+.advert .arrow-glyph {
+  position: absolute;
+  display: inline-block;
+  top: 78%;
+  left: 32%;
+}
+.advert .title {
+  position: absolute;
+  display: inline-block;
+  left: 18%;
+  top: 12%;
+  width: 250px;
+  z-index: 100;
+  font-size: 50px;
+}
+.advert .text {
+  position: absolute;
+  display: inline-block;
+  width: 22%;
+  top: 37%;
+  left: 17%;
+  z-index: 100;
+  line-height: 20px;
+}
+.advert .text .btn {
+  position: absolute;
+  display: flex;
+  height: 38px;
+  width: 145px;
+  top: 120%;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+.advert .text .btn:hover {
+  transition: 0.5s ease;
+  background: #e01c5a;
+}
+.advert .text .arrow {
+  position: absolute;
+  display: inline-block;
+  top: 128%;
+  left: 45%;
+}
+
+.data {
+  display: none;
+}
+
+/* Responsiveness */
 @media (max-width: 991px) {
+  .about {
+    height: 60vh;
+  }
   .about .card {
     height: 55vh;
   }
@@ -320,6 +406,44 @@ header .ham-burger.active span:nth-child(3) {
   .about .arrow-glyph {
     display: none;
   }
+
+  .advert .hex-gradient {
+    display: none;
+  }
+  .advert .image {
+    top: 13%;
+    right: 31%;
+    margin: auto;
+  }
+  .advert .glyph {
+    display: none;
+  }
+  .advert .arrow-glyph {
+    display: none;
+  }
+  .advert .title {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-size: 40px;
+    width: 625px;
+  }
+  .advert .text {
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    font-size: 20px;
+    width: 625px;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+  .advert .text .btn {
+    position: relative;
+    margin: 20px auto;
+  }
+  .advert .text .arrow {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .container .main-logo {
@@ -330,6 +454,9 @@ header .ham-burger.active span:nth-child(3) {
     bottom: 160px;
   }
 
+  .about {
+    height: 40vh;
+  }
   .about .card {
     height: 40vh;
   }
@@ -346,6 +473,42 @@ header .ham-burger.active span:nth-child(3) {
     display: none;
   }
   .about .arrow-glyph {
+    display: none;
+  }
+
+  .advert .hex-gradient {
+    display: none;
+  }
+  .advert .image {
+    top: 13%;
+    right: 25%;
+    margin: auto;
+  }
+  .advert .glyph {
+    display: none;
+  }
+  .advert .arrow-glyph {
+    display: none;
+  }
+  .advert .title {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-size: 35px;
+    width: 505px;
+  }
+  .advert .text {
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    font-size: 18px;
+    width: 505px;
+  }
+  .advert .text .btn {
+    position: relative;
+    margin: 20px auto;
+  }
+  .advert .text .arrow {
     display: none;
   }
 }
@@ -375,6 +538,41 @@ header .ham-burger.active span:nth-child(3) {
   .about .arrow-glyph {
     display: none;
   }
+
+  .advert .hex-gradient {
+    display: none;
+  }
+  .advert .image {
+    top: 18%;
+    margin: auto;
+  }
+  .advert .glyph {
+    display: none;
+  }
+  .advert .arrow-glyph {
+    display: none;
+  }
+  .advert .title {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-size: 35px;
+    width: 375px;
+  }
+  .advert .text {
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    font-size: 18px;
+    width: 375px;
+  }
+  .advert .text .btn {
+    position: relative;
+    margin: 20px auto;
+  }
+  .advert .text .arrow {
+    display: none;
+  }
 }
 @media (max-width: 360px) {
   .container .main-logo {
@@ -382,7 +580,7 @@ header .ham-burger.active span:nth-child(3) {
   }
 
   .about {
-    height: 50vh;
+    height: 40vh;
   }
   .about .card {
     height: 45vh;
@@ -401,6 +599,41 @@ header .ham-burger.active span:nth-child(3) {
     display: none;
   }
   .about .arrow-glyph {
+    display: none;
+  }
+
+  .advert .hex-gradient {
+    display: none;
+  }
+  .advert .image {
+    top: 18%;
+    margin: auto;
+  }
+  .advert .glyph {
+    display: none;
+  }
+  .advert .arrow-glyph {
+    display: none;
+  }
+  .advert .title {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-size: 35px;
+    width: 250px;
+  }
+  .advert .text {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    font-size: 18px;
+    width: 250px;
+  }
+  .advert .text .btn {
+    position: relative;
+    margin: 20px auto;
+  }
+  .advert .text .arrow {
     display: none;
   }
 }
