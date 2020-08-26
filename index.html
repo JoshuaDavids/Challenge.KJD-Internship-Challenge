@@ -10,6 +10,12 @@
     <title>King James Digital</title>
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/slider.css" />
+    <link rel="stylesheet" href="./style/animate.css" />
+    <style>
+      .wow:first-child {
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body>
     <div class="preloader">
@@ -54,7 +60,7 @@
     </section>
     <section class="about">
       <div class="card" id="about">
-        <p>
+        <p class="wow slideInLeft">
           We offer an interconnected set of services to help our clients respond
           to the disruptions and seize the oppertunities if the digital age.
           <a href="#about"><span class="text">ABOUT US</span></a
@@ -73,10 +79,10 @@
       </div>
     </section>
     <section class="advert" id="advert">
-      <div class="hex-gradient">
+      <div class="hex-gradient wow slideInLeft">
         <img src="https://i.postimg.cc/9fBkPsj6/hex-gradient.png" alt="hex" />
       </div>
-      <div class="image" id="slider">
+      <div class="image wow slideInRight" id="slider">
         <div>
           <img
             src="https://i.postimg.cc/LX6bxv9n/image-slider-1.jpg"
@@ -102,19 +108,19 @@
           />
         </div>
       </div>
-      <div class="glyph">
+      <div class="glyph wow slideInRight">
         <img src="https://i.postimg.cc/sDtb3pcN/glyph.png" alt="glyph" />
       </div>
-      <div class="arrow-glyph">
+      <div class="arrow-glyph wow slideInLeft">
         <img
           src="https://i.postimg.cc/VLS3y7jt/arrow-glyph.png"
           alt="arrow-gylph"
         />
       </div>
-      <div class="title">
+      <div class="title wow slideInLeft">
         <p class="heading">Advertising communications</p>
       </div>
-      <div class="text">
+      <div class="text wow slideInLeft">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -133,41 +139,64 @@
         </div>
       </div>
     </section>
-    <section class="data">
-      <div>
-        <img
-          class="circle-gradient"
-          src="https://i.postimg.cc/cCz2gYN6/circle-gradient.png"
-        />
+    <section class="data" id="data">
+      <div class="circle-gradient wow slideInRight">
+        <img src="https://i.postimg.cc/cCz2gYN6/circle-gradient.png" />
       </div>
-      <div>
-        <img
-          class="image-two"
-          src="https://i.postimg.cc/507kTvyp/image-slider-2.jpg"
-        />
+      <div class="image wow slideInLeft">
+        <img src="https://i.postimg.cc/507kTvyp/image-slider-2.jpg" />
       </div>
-      <div>
-        <img
-          class="arrow-glyph2"
-          src="https://i.postimg.cc/G3gZ50sr/arrow-glyph-2.png"
-        />
+      <div class="arrow-glyph wow slideInLeft">
+        <img src="https://i.postimg.cc/G3gZ50sr/arrow-glyph-2.png" />
       </div>
-      <div class="title">
-        <h1 class="heading">Data analytics</h1>
+      <div class="title wow slideInRight">
+        <p class="heading">Data analytics</p>
       </div>
-      <div class="text">
+      <div class="text wow slideInRight">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
+        </p>
+        <div class="btn">
           <a href="#data"><span class="read-more">READ MORE</span></a>
+        </div>
+        <div class="arrow">
           <img
             class="arrow-right"
             src="https://i.postimg.cc/NFFZjDSW/arrow-right.png"
             alt="arrow-right"
           />
-        </p>
+        </div>
+      </div>
+    </section>
+    <section class="cards" id="news">
+      <div class="content">
+        <div class="box wow slideInLeft">
+          <h5 class="head">LATEST NEWS</h5>
+          <h1 class="text">King James Digital win big at the 2017 Loeries</h1>
+          <img
+            class="arrow"
+            src="https://i.postimg.cc/NFFZjDSW/arrow-right.png"
+          />
+        </div>
+        <div class="box wow bounceInUp">
+          <h5 class="head">LATEST WORK</h5>
+          <h1 class="text">Sanlam Conspicious Savers</h1>
+          <img
+            class="arrow"
+            src="https://i.postimg.cc/NFFZjDSW/arrow-right.png"
+          />
+        </div>
+        <div class="box wow slideInRight">
+          <h5 class="head">LATEST CAREERS</h5>
+          <h1 class="text">Front end developer Cape Town</h1>
+          <img
+            class="arrow"
+            src="https://i.postimg.cc/NFFZjDSW/arrow-right.png"
+          />
+        </div>
       </div>
     </section>
     <script src="./js/script.js"></script>
@@ -192,6 +221,14 @@
           $(this).addClass("active");
         }
       });
+    </script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+      wow = new WOW({
+        animateClass: "animated",
+        offset: 0,
+      });
+      wow.init();
     </script>
   </body>
 </html>

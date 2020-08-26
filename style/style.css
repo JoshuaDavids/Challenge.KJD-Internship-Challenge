@@ -324,6 +324,9 @@ header .ham-burger.active span:nth-child(3) {
   z-index: 1;
   left: 25%;
 }
+.advert .hex-gradient img {
+  width: 90%;
+}
 .advert .image {
   position: absolute;
   display: inline-block;
@@ -342,7 +345,10 @@ header .ham-burger.active span:nth-child(3) {
   position: absolute;
   display: inline-block;
   top: 78%;
-  left: 32%;
+  left: 35%;
+}
+.advert .arrow-glyph img {
+  width: 70%;
 }
 .advert .title {
   position: absolute;
@@ -350,7 +356,7 @@ header .ham-burger.active span:nth-child(3) {
   left: 18%;
   top: 12%;
   width: 250px;
-  z-index: 100;
+  z-index: 4;
   font-size: 50px;
 }
 .advert .text {
@@ -359,7 +365,7 @@ header .ham-burger.active span:nth-child(3) {
   width: 22%;
   top: 37%;
   left: 17%;
-  z-index: 100;
+  z-index: 4;
   line-height: 20px;
 }
 .advert .text .btn {
@@ -385,66 +391,135 @@ header .ham-burger.active span:nth-child(3) {
 }
 
 .data {
-  display: none;
+  position: relative;
+  background: #6f249b;
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+  height: 150vh;
+}
+.data .circle-gradient {
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  left: 40%;
+  top: 20%;
+}
+.data .circle-gradient img {
+  width: 90%;
+}
+.data .image {
+  position: absolute;
+  display: inline-block;
+  right: 30%;
+  top: 35%;
+  z-index: 2;
+}
+.data .image img {
+  width: 80%;
+}
+.data .arrow-glyph {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  bottom: 13%;
+  z-index: 3;
+}
+.data .arrow-glyph img {
+  width: 90%;
+}
+.data .title {
+  position: absolute;
+  display: inline-block;
+  left: 57.5%;
+  top: 38%;
+  width: 400px;
+  z-index: 4;
+  font-size: 50px;
+}
+.data .text {
+  position: absolute;
+  display: inline-block;
+  width: 22%;
+  top: 47%;
+  right: 16%;
+  z-index: 4;
+  line-height: 20px;
+}
+.data .text .btn {
+  position: absolute;
+  display: flex;
+  height: 38px;
+  width: 145px;
+  top: 120%;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+.data .text .btn:hover {
+  transition: 0.5s ease;
+  background: #e01c5a;
+}
+.data .text .arrow {
+  position: absolute;
+  display: inline-block;
+  top: 128%;
+  left: 45%;
+}
+
+.cards {
+  padding: 80px;
+  background: #ffffff;
+}
+.cards .content {
+  -webkit-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards .content .box {
+  border-radius: 5px;
+  margin: 0 20px;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  height: 260px;
+  padding: 15px;
+}
+.cards .content .box:hover {
+  cursor: pointer;
+  transition: 0.5s ease;
+  -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.7);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.7);
+}
+.cards .content .box:nth-child(1) {
+  background: url("https://i.postimg.cc/FRD2v8Wy/bg-square-gradient.png");
+  max-width: 100%;
+  max-height: 100%;
+}
+.cards .content .box:nth-child(2) {
+  background: url("https://i.postimg.cc/52LTy6KN/bg-rectangle-gradient.png");
+  max-width: 100%;
+  max-height: 100%;
+}
+.cards .content .box:nth-child(3) {
+  background: url("https://i.postimg.cc/hGnwdcN8/bg-circle-gradient.png");
+  max-width: 100%;
+  max-height: 100%;
+}
+.cards .content .box .head {
+  padding-top: 15px;
+  color: #e01c5a;
+}
+.cards .content .box .text {
+  padding-top: 15px;
+  color: #fff;
+  font-size: 30px;
+}
+.cards .content .box .arrow {
+  float: right;
+  padding-top: 90px;
 }
 
 /* Responsiveness */
-@media (max-width: 991px) {
-  .about {
-    height: 60vh;
-  }
-  .about .card {
-    height: 55vh;
-  }
-  .about .card p {
-    padding: 30px 45px;
-    font-size: 40px;
-  }
-  .about .card p .arrow-right {
-    display: none;
-  }
-  .about .arrow-glyph {
-    display: none;
-  }
-
-  .advert .hex-gradient {
-    display: none;
-  }
-  .advert .image {
-    top: 13%;
-    right: 31%;
-    margin: auto;
-  }
-  .advert .glyph {
-    display: none;
-  }
-  .advert .arrow-glyph {
-    display: none;
-  }
-  .advert .title {
-    position: absolute;
-    top: 0;
-    text-align: center;
-    font-size: 40px;
-    width: 625px;
-  }
-  .advert .text {
-    position: absolute;
-    text-align: center;
-    top: 60%;
-    font-size: 20px;
-    width: 625px;
-    letter-spacing: 1px;
-    line-height: 25px;
-  }
-  .advert .text .btn {
-    position: relative;
-    margin: 20px auto;
-  }
-  .advert .text .arrow {
-    display: none;
-  }
-}
 @media (max-width: 767px) {
   .container .main-logo {
     height: 70px;
@@ -511,6 +586,56 @@ header .ham-burger.active span:nth-child(3) {
   .advert .text .arrow {
     display: none;
   }
+
+  .data {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .data .circle-gradient {
+    display: none;
+  }
+  .data .image {
+    top: 23%;
+    right: 0;
+    left: 18%;
+  }
+  .data .arrow-glyph {
+    display: none;
+  }
+  .data .title {
+    position: absolute;
+    top: 15%;
+    left: 16%;
+    text-align: center;
+    font-size: 35px;
+    width: 505px;
+  }
+  .data .text {
+    position: absolute;
+    text-align: center;
+    top: 63%;
+    font-size: 18px;
+    width: 505px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  .data .text .btn {
+    position: relative;
+    margin: 20px auto;
+  }
+  .data .text .arrow {
+    display: none;
+  }
+
+  .cards {
+    padding: 50px;
+  }
+  .cards .content {
+    flex-direction: column;
+  }
+  .cards .content .box {
+    margin: 10px;
+    width: 757px;
+  }
 }
 @media (max-width: 575px) {
   .container .main-logo {
@@ -544,7 +669,8 @@ header .ham-burger.active span:nth-child(3) {
   }
   .advert .image {
     top: 18%;
-    margin: auto;
+    right: 0;
+    left: 2%;
   }
   .advert .glyph {
     display: none;
@@ -572,6 +698,56 @@ header .ham-burger.active span:nth-child(3) {
   }
   .advert .text .arrow {
     display: none;
+  }
+
+  .data {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .data .circle-gradient {
+    display: none;
+  }
+  .data .image {
+    top: 23%;
+    right: 0;
+    left: 17%;
+  }
+  .data .arrow-glyph {
+    display: none;
+  }
+  .data .title {
+    position: absolute;
+    top: 15%;
+    left: 16%;
+    text-align: center;
+    font-size: 35px;
+    width: 375px;
+  }
+  .data .text {
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    font-size: 18px;
+    width: 375px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  .data .text .btn {
+    position: relative;
+    margin: 20px auto;
+  }
+  .data .text .arrow {
+    display: none;
+  }
+
+  .cards {
+    padding: 50px;
+  }
+  .cards .content {
+    flex-direction: column;
+  }
+  .cards .content .box {
+    margin: 10px;
+    width: 565px;
   }
 }
 @media (max-width: 360px) {
@@ -607,7 +783,8 @@ header .ham-burger.active span:nth-child(3) {
   }
   .advert .image {
     top: 18%;
-    margin: auto;
+    right: 0;
+    left: 3%;
   }
   .advert .glyph {
     display: none;
@@ -635,6 +812,54 @@ header .ham-burger.active span:nth-child(3) {
   }
   .advert .text .arrow {
     display: none;
+  }
+
+  .data {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .data .circle-gradient {
+    display: none;
+  }
+  .data .image {
+    top: 23%;
+    right: 0;
+    left: 17%;
+  }
+  .data .arrow-glyph {
+    display: none;
+  }
+  .data .title {
+    position: absolute;
+    top: 15%;
+    left: 16%;
+    text-align: center;
+    font-size: 35px;
+    width: 250px;
+  }
+  .data .text {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    font-size: 18px;
+    width: 250px;
+  }
+  .data .text .btn {
+    position: relative;
+    margin: 20px auto;
+  }
+  .data .text .arrow {
+    display: none;
+  }
+
+  .cards {
+    padding: 50px;
+  }
+  .cards .content {
+    flex-direction: column;
+  }
+  .cards .content .box {
+    margin: 10px;
+    width: 350px;
   }
 }
 
