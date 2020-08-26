@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="https://i.postimg.cc/1tj9JvJ7/kingjamesfavicon.png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King James Digital</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="#"></a>
+        </div>
+        <a onclick="navToggle()" href="javascript:void(0);" class="ham-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <div class="nav">
+          <ul>
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#advert">Advert</a></li>
+            <li><a class="nav-link" href="#data">Data</a></li>
+            <li><a class="nav-link" href="#news">Feed</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home" id="home">
+      <div class="container">
+        <img
+          class="main-logo"
+          src="https://i.postimg.cc/x1DSsP4s/kjd-logo.png"
+          alt="logo"
+        />
+      </div>
+      <a href="#about" class="scroll">
+        <img
+          class="icon"
+          src="https://i.postimg.cc/2SRV4hFY/arrow-down.png"
+          alt="link"
+        />
+      </a>
+      <section class="about">
+        <div class="box-center" id="about">
+          <p class="wow bounceInUp">
+            We offer an interconnected set of services to help our clients
+            respond to the disruptions and seize the oppertunities if the
+            digital age.
+
+            <a href="#about"><span class="text">ABOUT US</span></a
+            ><img
+              class="arrow-right"
+              src="https://i.postimg.cc/NFFZjDSW/arrow-right.png"
+              alt="arrow"
+            />
+          </p>
+        </div>
+        <div class="arrow-glyph">
+          <img
+            class="wow bounceInUp"
+            src="https://i.postimg.cc/Yqd9DY44/not-arrow-glyph.png"
+            alt="arrow"
+          />
+        </div>
+      </section>
+    </section>
+    <script src="./js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(".nav ul li a").click(function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          let hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              window.location.hash = hash;
+            }
+          );
+
+          $(".nav ul li a").removeClass("active");
+          $(this).addClass("active");
+        }
+      });
+    </script>
+  </body>
+</html>
