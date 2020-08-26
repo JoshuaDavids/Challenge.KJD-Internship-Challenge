@@ -526,8 +526,7 @@ header .ham-burger.active span:nth-child(3) {
   justify-content: center;
 }
 .footer .box {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 30px;
 }
 .footer .box .head {
   max-width: 250px;
@@ -684,15 +683,12 @@ header .ham-burger.active span:nth-child(3) {
   }
 
   .footer {
-    padding: 10px;
-  }
-  .footer .content {
-    flex-direction: column;
     text-align: center;
+    flex-direction: column;
+    height: 80vh;
   }
-  .footer .content .box {
-    margin: 10px;
-    width: 757px;
+  .footer .head {
+    margin: 10px auto;
   }
 }
 @media (max-width: 575px) {
@@ -809,15 +805,8 @@ header .ham-burger.active span:nth-child(3) {
   }
 
   .footer {
-    padding: 10px;
-  }
-  .footer .content {
     flex-direction: column;
-    text-align: center;
-  }
-  .footer .content .box {
-    margin: 10px;
-    width: 565px;
+    height: 80vh;
   }
 }
 @media (max-width: 360px) {
@@ -933,15 +922,8 @@ header .ham-burger.active span:nth-child(3) {
   }
 
   .footer {
-    padding: 10px;
-  }
-  .footer .content {
     flex-direction: column;
-    text-align: center;
-  }
-  .footer .content .box {
-    margin: 10px;
-    width: 350px;
+    height: 80vh;
   }
 }
 
