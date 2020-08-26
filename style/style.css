@@ -242,14 +242,166 @@ header .ham-burger.active span:nth-child(3) {
   }
 }
 
+.about {
+  height: 100vh;
+  background: #201728;
+}
+.about .card {
+  transform: translateY(-90px);
+  width: 68%;
+  height: 70vh;
+  background: #6f249b;
+  margin: auto;
+}
+.about .card p {
+  padding: 68px 90px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 45px;
+}
+.about .card p a {
+  font-size: 16px;
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 45px;
+  width: 150px;
+  border: 2px solid #e01c5a;
+  transform: translateY(30px);
+  font-family: sans-serif;
+}
+.about .card p a:hover {
+  transition: 0.5s ease;
+  background: #e01c5a;
+}
+.about .card p .arrow-right {
+  transform: translate(80px, -25px);
+}
+.about .card:after {
+  transform: translateY(0.75px);
+  border-color: transparent transparent #201728 transparent;
+  border-style: solid;
+  border-width: 0 0 7vw 80vw;
+  bottom: 0;
+  content: "";
+  height: 0;
+  position: absolute;
+  left: 0;
+  width: 0;
+}
+.about .arrow-glyph {
+  background: #201728;
+  margin: auto;
+  transform: translate(-50px, -50px);
+  width: 5px;
+  height: 60px;
+}
+
+/* Responsiveness */
+@media (max-width: 1199px) {
+  .about .card .arrow-glyph {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .about .card {
+    height: 55vh;
+  }
+  .about .card p {
+    padding: 30px 45px;
+    font-size: 40px;
+  }
+  .about .card p .arrow-right {
+    display: none;
+  }
+  .about .arrow-glyph {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .container .main-logo {
     height: 70px;
   }
+
+  .home .scroll {
+    bottom: 160px;
+  }
+
+  .about .card {
+    height: 40vh;
+  }
+  .about .card p {
+    padding: 20px 45px;
+    font-size: 30px;
+  }
+  .about .card p a {
+    height: 40px;
+    width: 120px;
+    transform: translateY(20px);
+  }
+  .about .card p .arrow-right {
+    display: none;
+  }
+  .about .arrow-glyph {
+    display: none;
+  }
 }
-@media (max-width: 550px) {
+@media (max-width: 575px) {
   .container .main-logo {
     height: 60px;
+  }
+
+  .about {
+    height: 50vh;
+  }
+  .about .card {
+    height: 45vh;
+  }
+  .about .card p {
+    padding: 25px 40px;
+    font-size: 25px;
+  }
+  .about .card p a {
+    height: 40px;
+    width: 120px;
+    transform: translateY(20px);
+  }
+  .about .card p .arrow-right {
+    display: none;
+  }
+  .about .arrow-glyph {
+    display: none;
+  }
+}
+@media (max-width: 360px) {
+  .container .main-logo {
+    height: 60px;
+  }
+
+  .about {
+    height: 50vh;
+  }
+  .about .card {
+    height: 45vh;
+  }
+  .about .card p {
+    padding: 25px 40px;
+    font-size: 20px;
+  }
+  .about .card p a {
+    font-size: 14px;
+    height: 30px;
+    width: 110px;
+    transform: translateY(20px);
+  }
+  .about .card p .arrow-right {
+    display: none;
+  }
+  .about .arrow-glyph {
+    display: none;
   }
 }
 
